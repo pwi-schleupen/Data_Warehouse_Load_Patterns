@@ -36,6 +36,12 @@
     "loadPatternNotes": ""
   },
   {
+    "loadPatternName": "Data Vault Link 003 Generate Tables",
+    "loadPatternType": "NaturalBusinessRelationship",
+    "loadPatternFilePath": "loadPatternLinkGenerateTables.handlebars",
+    "loadPatternNotes": ""
+  },
+  {
     "loadPatternName": "Data Vault Link Satellite 001 View Pattern",
     "loadPatternType": "NaturalBusinessRelationshipContext",
     "loadPatternFilePath": "loadPatternLinkSatelliteView.handlebars",
@@ -117,6 +123,12 @@
     "loadPatternName": "Satellite 002 Insert Into Pattern",
     "loadPatternType": "Context",
     "loadPatternFilePath": "loadPatternSatelliteInsertInto.handlebars",
+    "loadPatternNotes": ""
+  },
+  {
+    "loadPatternName": "Satellite 003 Generate Tables",
+    "loadPatternType": "Context",
+    "loadPatternFilePath": "loadPatternSatelliteGenerateTable.handlebars",
     "loadPatternNotes": ""
   },
   {
