@@ -1,0 +1,18 @@
+{{#each dataObjectMappings}}{{#if @first}}
+--
+-- Link table creation statement for {{targetDataObject.name}}
+-- Generated at {{now}}
+--
+
+IF OBJECT_ID('[{{targetDataObject.name}}]', 'U') IS NOT NULL
+  DROP TABLE [{{targetDataObject.name}}];
+
+CREATE TABLE [{{targetDataObject.name}}]
+(  {{#each businessKeys}}
+   [{{surrogateKey}}] binary(16) NOT NULL,{{/each}}{{#each dataItemMappings}}
+   [{{targetDataItem.name}}] [varchar](100),{{/each}}
+   [{{../metadataConfiguration.etlProcessAttribute}}] [int] NOT NULL, 
+   [{{../metadataConfiguration.loadDateTimeAttribute}}] [datetime2](7) NOT NULL,
+   [{{../metadataConfiguration.recordSourceAttribute}}] [nvarchar](100) NOT NULL
+){{/if}}
+{{/each}}
